@@ -17,7 +17,7 @@ export default function CommonLayout({ mediaData }) {
       <Head>
         <title>Netflix</title>
     
-      <meta name="google" content="nositelinkssearchbox">
+  
 
       </Head>
       <>
