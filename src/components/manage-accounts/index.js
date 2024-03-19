@@ -57,6 +57,9 @@ export default function ManageAccounts() {
     getAllAccounts();
   }, []);
 
+  const handleReload = () => {
+    router.reload();
+  };
   async function handleSave() {
     const res = await fetch("/api/account/create-account", {
       method: "POST",
@@ -134,7 +137,7 @@ export default function ManageAccounts() {
   }
 
   return (
-    <div className="min-h-screen flex justify-center flex-col items-center relative">
+    <div className="min-h-screen flex justify-center flex-col items-center relative" onLoad={handleReload}>
       <div className="flex justify-center flex-col items-center">
         <h1 className="text-white font-bold text-[40px] p-3 md:text-[54px] my-[36px] text-center">
           Who's Watching?
