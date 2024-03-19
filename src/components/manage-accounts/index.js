@@ -165,7 +165,9 @@ export default function ManageAccounts() {
                       <div
                         onClick={() => {
                           handleRemoveAccount(item);
-                          handleRemove();                        }
+                          handleRemove(); 
+                        }
+                      }
                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer"
                       >
                         <TrashIcon width={30} height={30} color="black" />
