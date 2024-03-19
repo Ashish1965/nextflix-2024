@@ -2,6 +2,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import GlobalState from "@/context";
 import NextAuthProvider from "@/auth-provider";
+import { GoogleTagManager } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <NextAuthProvider><GlobalState>{children}</GlobalState></NextAuthProvider>
       </body>
+    <GoogleTagManager gtmId="GTM-XYZ" />
     </html>
   );
 }
