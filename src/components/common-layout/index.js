@@ -16,6 +16,7 @@ export default function CommonLayout({ mediaData }) {
     >
       <Head>
         <title>Netflix</title>
+      <meta name="google-site-verification" content="w3DGPUyXUvPLhZt_iGR9zSy5YqKRQJGPGiI8KiqDzCA" />
       </Head>
       <>
         <Navbar />
