@@ -57,9 +57,7 @@ export default function ManageAccounts() {
     getAllAccounts();
   }, []);
 
-  const handleReload = () => {
-    router.reload();
-  };
+  
   async function handleSave() {
     const res = await fetch("/api/account/create-account", {
       method: "POST",
@@ -87,6 +85,7 @@ export default function ManageAccounts() {
   }
 
   async function handleRemoveAccount(getItem) {
+    window.location.reload();
     const res = await fetch(`/api/account/remove-account?id=${getItem._id}`, {
       method: "DELETE",
     });
@@ -163,10 +162,9 @@ export default function ManageAccounts() {
                     />
                     {showDeleteIcon ? (
                       <div
-                        onClick={() => {
+                        onClick={() => 
                           handleRemoveAccount(item);
-                          handleRemove(); 
-                        }
+                        
                       }
                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer"
                       >
