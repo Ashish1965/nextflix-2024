@@ -137,7 +137,7 @@ export default function ManageAccounts() {
   }
 
   return (
-    <div className="min-h-screen flex justify-center flex-col items-center relative" onLoad={handleReload}>
+    <div className="min-h-screen flex justify-center flex-col items-center relative">
       <div className="flex justify-center flex-col items-center">
         <h1 className="text-white font-bold text-[40px] p-3 md:text-[54px] my-[36px] text-center">
           Who's Watching?
@@ -163,7 +163,9 @@ export default function ManageAccounts() {
                     />
                     {showDeleteIcon ? (
                       <div
-                        onClick={() => handleRemoveAccount(item)}
+                        onClick={() => {
+                          handleRemoveAccount(item);
+                          handleRemove();                        }
                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 cursor-pointer"
                       >
                         <TrashIcon width={30} height={30} color="black" />
