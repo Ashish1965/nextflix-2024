@@ -17,7 +17,6 @@ export default function RootLayout({ children }) {
       <body className={inter.className}>
       <NextAuthProvider><GlobalState>{children}</GlobalState></NextAuthProvider>
       </body>
-    <GoogleTagManager gtmId="GTM-XYZ" />
     </html>
   );
 }
